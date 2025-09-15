@@ -86,6 +86,13 @@ export default function RootLayout({
                   Play Station
                 </Link>
               </li>
+
+
+               <li>
+                <Link href="/signUp" className="hover:text-[#0000FF]">
+                   Create Post
+                </Link>
+              </li>
             </ul>
           </div>
 
