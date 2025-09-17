@@ -40,10 +40,10 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-[#191B1F] ">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-white p-6 rounded-lg shadow-md"
+        className="w-full max-w-md bg-white p-6 rounded-lg shadow-md mt-10"
       >
         <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
 
