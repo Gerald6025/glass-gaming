@@ -15,9 +15,12 @@ export default function Home() {
       <Ban />
       <History />
       <Ps />
-      <div className="flex">
+      <div className="bg-[#191B1F] text-white p-8">
+        <h1 className="text-5xl font-bold text-center">Dashboard</h1>
+      <div className="flex border-2 border-gray-600 rounded-lg p-4 m-4">
       <CreatePostPage />
       <PostList />
+    </div>
     </div>
     </div>
   );
