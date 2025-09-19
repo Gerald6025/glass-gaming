@@ -28,12 +28,12 @@ export default function SigninPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Invalid credentials");
 
-      // Success message
+      
       setMessage(` Welcome back, ${data.user.username}!`);
       setMessageColor("text-green-500");
       setForm({ email: "", password: "" });
 
-      // Redirect to dashboard after 1 second
+      
       setTimeout(() => router.push("/"), 1000);
     } catch (err: unknown) {
       if (err instanceof Error) {
@@ -80,7 +80,7 @@ export default function SigninPage() {
           Sign In
         </button>
 
-        {/* Sign Up link */}
+    
         <p className="mt-4 text-center text-sm">
           Don’t have an account?{" "}
           <Link href="/signUp" className="text-blue-600 underline">
@@ -88,7 +88,7 @@ export default function SigninPage() {
           </Link>
         </p>
 
-        {/* Message */}
+        
         {message && (
           <p className={`mt-3 text-sm text-center ${messageColor}`}>{message}</p>
         )}

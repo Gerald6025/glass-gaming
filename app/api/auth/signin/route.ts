@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // ✅ User is authenticated
+    
     return NextResponse.json({
       message: "Signin successful",
       user: {
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
       },
     });
   } catch (error: unknown) {
-    // TypeScript-safe error handling
+    
     if (error instanceof Error) {
       return NextResponse.json({ error: error.message }, { status: 500 });
     } else {
