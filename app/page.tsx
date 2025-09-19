@@ -15,8 +15,10 @@ export default function Home() {
       <Ban />
       <History />
       <Ps />
-      <CreatePostPage/>
-      <PostList/>
+      <div className="flex">
+      <CreatePostPage />
+      <PostList />
+    </div>
     </div>
   );
 }
