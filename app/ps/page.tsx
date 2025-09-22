@@ -139,9 +139,9 @@ export default async function Ps() {
               backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757506725/mark-decile-WA84FtTi7NU-unsplash_1_vluzkr.jpg)`,
             }}
           >
-            <div className="flex gap-50 ">
+            <div className="flex gap-52 ">
               <h1 className="text-white font-[poppins] font-bold text-lg ">
-                <Link href="/">Games</Link>
+                <Link href="/">Video</Link>
               </h1>
               <h1 className="text-white font-[poppins] font-bold bg-gray-400 w-7 text-center rounded-md">
                 5
@@ -155,9 +155,9 @@ export default async function Ps() {
               backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1756978011/javier-martinez-hUD0PUczwJQ-unsplash_tuxggf.jpg)`,
             }}
           >
-            <div className="flex gap-50  ">
+            <div className="flex gap-53  ">
               <h1 className="text-white font-[poppins] font-bold text-lg ">
-                <Link href="/">Games</Link>
+                <Link href="/">Xbox</Link>
               </h1>
               <h1 className="text-white font-[poppins] font-bold bg-gray-400 w-7 text-center   rounded-md">
                 3
