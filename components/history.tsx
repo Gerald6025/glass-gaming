@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { JSX } from "react/jsx-runtime";
-import { url } from "inspector";
+
 
 interface Post {
   id: number;

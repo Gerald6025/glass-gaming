@@ -7,7 +7,7 @@ export default function CreatePost() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await fetch("/api/Post2", {
+    await fetch("http://localhost:3000/api/Post2", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, content }),

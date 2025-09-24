@@ -8,7 +8,7 @@ interface Playstation {
   id: number;
   title: string;
   description: string;
-  imageurl: string;
+  imageurl: string;  
 }
 
 export const getData = async (): Promise<

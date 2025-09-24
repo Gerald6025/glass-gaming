@@ -9,7 +9,7 @@ interface Post {
 }
 
 export const getData = async (): Promise<Post[] | { posts: Post[] }> => {
-  const res = await fetch("http://localhost:3001/api/post", {
+  const res = await fetch("/api/post", {
     cache: "no-store",
   });
   if (!res.ok) return notFound();
