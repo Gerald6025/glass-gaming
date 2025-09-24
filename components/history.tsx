@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { JSX } from "react/jsx-runtime";
+import { url } from "inspector";
 
 interface Post {
   id: number;
@@ -28,11 +29,8 @@ const History = async (): Promise<JSX.Element> => {
       <div>
         <Link href="/inside/10">
           <div
-            className="h-95 w-[122%] bg-cover bg-center rounded-lg px-8 pt-60 font-[poppins]"
-            style={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757489458/javier-martinez-hUD0PUczwJQ-unsplash_2_c5nwd2.jpg)",
-            }}
+            className="h-95 bg-[url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757489458/javier-martinez-hUD0PUczwJQ-unsplash_2_c5nwd2.jpg)] w-[122%] bg-cover bg-center rounded-lg px-8 pt-60 font-[poppins]"
+            
           >
             <h2 className="bg-[#008B8B] w-11 text-center px-0 rounded-sm py-1 mb-5 text-[12px] font-[poppins] font-semibold text-white">
               Xbox
