@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Mininav from "@/components/mininav";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+
 import Com from "@/components/comment";
 
 interface Playstation {
@@ -17,7 +17,7 @@ export const getData = async (): Promise<
   const res = await fetch("http://localhost:3000/api/playstation", {
     cache: "no-store",
   });
-  if (!res.ok) return notFound();
+  if (!res.ok) return [];
   return res.json();
 };
 
@@ -36,7 +36,7 @@ export default async function Ps() {
               <div
                 className="mt-5 bg-cover bg-center  w-95  h-85 rounded-lg p-4 flex flex-col justify-end hover:scale-105 transition-transform duration-300 ease-in-out"
                 style={{
-                  backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1756975709/martin-katler-caNzzoxls8Q-unsplash_py26pk.jpg)`,
+                  backgroundImage: "url('https://res.cloudinary.com/dvqhcm07a/image/upload/v1756975709/martin-katler-caNzzoxls8Q-unsplash_py26pk.jpg')",
                 }}
               >
                 <h2 className="bg-[#0000FF] w-25 text-center px-1 rounded-sm py-1 mb-5  text-white text-[12px] font-[poppins] font-semibold">

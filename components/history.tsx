@@ -45,14 +45,16 @@ const History = async (): Promise<JSX.Element> => {
         </Link>
       </div>
 
-      
       <div className="bg-[#232428] h-75 w-[25%] mb-19 rounded-lg flex flex-col justify-center items-center p-4 ">
-         <h1 className="pr-65 mb-5 text-white font-[poppins] ">Xbox</h1>
+        <h1 className="pr-65 mb-5 text-white font-[poppins] ">Xbox</h1>
         {posts.length > 0 ? (
           posts.map((post: Post) => (
-            <Link key={post.id} href={`/inside/${post.id}`} className="w-full mb-3">
+            <Link
+              key={post.id}
+              href={`/inside/${post.id}`}
+              className="w-full mb-3"
+            >
               <div className="rounded-md   transition flex gap-2 ">
-              
                 <Image
                   src={post.imageurl}
                   alt={post.title}
@@ -61,8 +63,12 @@ const History = async (): Promise<JSX.Element> => {
                   className="rounded-md mb-2  h-24  "
                 />
                 <div>
-                <h3 className="bg-[#191B1F] w-11 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#3D55EF] font-[poppins] font-semibold">{post.title}</h3>
-                <p className="text-white font-[Poppins] text-sm  hover:text-[#0000FF] -mt-5 w-40">{post.description}</p>
+                  <h3 className="bg-[#191B1F] w-11 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#3D55EF] font-[poppins] font-semibold">
+                    {post.title}
+                  </h3>
+                  <p className="text-white font-[Poppins] text-sm  hover:text-[#0000FF] -mt-5 w-40">
+                    {post.description}
+                  </p>
                 </div>
               </div>
             </Link>
