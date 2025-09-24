@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Game from "@/components/game";
 import Ban from "@/components/ban";
 import History from "@/components/history";

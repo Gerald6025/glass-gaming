@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppinsFont.className} antialiased`}
       >
         
         <div className="justify-between items-center flex px-5 gap-20 absolute  text-white top-8 bg-[#232428] w-[80%] right-[10%] left-[10%] z-10 py-1 rounded-md">

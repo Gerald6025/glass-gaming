@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Mininav from "@/components/mininav";
 import Link from "next/link";
-import playstation from "@/models/playstation";
 import { notFound } from "next/navigation";
 import Com from "@/components/comment";
 

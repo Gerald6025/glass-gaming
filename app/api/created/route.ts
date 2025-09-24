@@ -1,15 +1,15 @@
 import clientPromise from "@/lib/mongodb";
 import { NextResponse } from "next/server";
-import { ObjectId } from "mongodb";
+import { ObjectId, MongoClient } from "mongodb";
 
 export async function GET() {
   try {
-    const client = await clientPromise;
+    const client: MongoClient = await clientPromise();
     const db = client.db("Next15");
     const docs = await db.collection("created").find({}).toArray();
 
     const created = docs.map((doc) => ({
-      _id: (doc._id as ObjectId).toHexString(),
+      _id: doc._id instanceof ObjectId ? doc._id.toHexString() : String(doc._id),
       title: doc.title,
       content: doc.content,
       createdAt: doc.createdAt,
@@ -33,7 +33,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const client = await clientPromise;
+    const client: MongoClient = await clientPromise();
     const db = client.db("Next15");
 
     const newDoc = {

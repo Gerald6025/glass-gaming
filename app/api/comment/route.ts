@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import connect from "@/db";
 import comment from "@/models/comment"; 
 
-export const GET = async (request: Request) => {
+export const GET = async () => {
   try {
     await connect();
     const comments = await comment.find()
