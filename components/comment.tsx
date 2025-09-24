@@ -10,10 +10,21 @@ interface Comment {
   imageurl: string;
 }
 
+// export const getData = async (): Promise<Comment[] | { posts: Comment[] }> => {
+//   const res = await fetch("http://localhost:3000/api/comment", {
+//     cache: "no-store",
+//   });
+//   if (!res.ok) return notFound();
+//   return res.json();
+// };
 export const getData = async (): Promise<Comment[] | { posts: Comment[] }> => {
-  const res = await fetch("http://localhost:3000/api/comment", {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}/api/comment`, {
     cache: "no-store",
   });
+
   if (!res.ok) return notFound();
   return res.json();
 };

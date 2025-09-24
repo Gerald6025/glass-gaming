@@ -42,12 +42,26 @@ interface Playstation {
   imageurl: string;
 }
 
+// export const getData = async (): Promise<
+//   Playstation[] | { playstations: Playstation[] }
+// > => {
+//   const res = await fetch("http://localhost:3000/api/playstation", {
+//     cache: "no-store",
+//   });
+//   if (!res.ok) return notFound();
+//   return res.json();
+// };
+
 export const getData = async (): Promise<
   Playstation[] | { playstations: Playstation[] }
 > => {
-  const res = await fetch("http://localhost:3000/api/playstation", {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}/api/playstation`, {
     cache: "no-store",
   });
+
   if (!res.ok) return notFound();
   return res.json();
 };

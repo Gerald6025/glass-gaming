@@ -5,17 +5,32 @@ export default function CreatePost() {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
 
+  // const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   await fetch("http://localhost:3000/api/Post2", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ title, content }),
+  //   });
+  //   setTitle("");
+  //   setContent("");
+  //   window.location.reload(); 
+  // };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    await fetch("http://localhost:3000/api/Post2", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title, content }),
-    });
-    setTitle("");
-    setContent("");
-    window.location.reload(); 
-  };
+  e.preventDefault();
+
+  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Post2`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ title, content }),
+  });
+
+  setTitle("");
+  setContent("");
+  window.location.reload();
+};
+
 
   return (
     <form onSubmit={handleSubmit} className="p-4 flex flex-col gap-2">

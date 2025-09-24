@@ -11,15 +11,21 @@ interface Playstation {
   imageurl: string;  
 }
 
+
 export const getData = async (): Promise<
   Playstation[] | { playstations: Playstation[] }
 > => {
-  const res = await fetch("http://localhost:3000/api/playstation", {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
+  const res = await fetch(`${baseUrl}/api/playstation`, {
     cache: "no-store",
   });
+
   if (!res.ok) return [];
   return res.json();
 };
+
 
 export default async function Ps() {
   const data = await getData();
