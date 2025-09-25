@@ -9,19 +9,27 @@ import Read from "@/components/read";
 import Latest from "@/components/latest";
 import Gamz from "@/components/gamz";
 import Footer from "@/components/footer";
-
+import Side from "@/components/side";
 
 
 export default function Home() {
   return (
     <div className="bg-[#191B1F] h-[950vh] relative  ">
+     
       <Game />
       <Ban />
+      <div className="grid grid-cols-2 gap-10">
+        <div>
       <History />
       <Ps />
       <Read />
       <Latest />
       <Gamz/>
+      </div>
+      <div>
+      <Side />
+      </div>
+      </div>
       <Footer />
       
       <div className="bg-[#191B1F] text-white p-8">

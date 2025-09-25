@@ -46,9 +46,9 @@ const posts = [
 
 const Gamz = () => {
   return (
-      <div className="bg-[#232428] h-250 w-[52.5%] mb-19 rounded-lg flex flex-col  p-4 ml-34 mt-10">
+      <div className="bg-[#232428] h-270 w-[108%] mb-19 rounded-lg    p-10 ml-34 mt-10">
          <h1 className="mb-5 text-white text-lg font-[poppins] ">Games</h1>
-         <div className='grid grid-cols-2 gap-4 '>
+         <div className='grid grid-cols-2 gap-4  '>
         {posts.length > 0 ? (
           posts.map((post) => (
             <Link key={post.id} href={`/inside/${post.id}`} className="w-full mb-3">

@@ -33,8 +33,8 @@ export default async function Ps() {
     ? data
     : data.playstations || [];
   return (
-    <div className=" flex items-center justify-center h-[150vh] bg-[#191B1F] gap-5  w-[100%] mx-auto flex-wrap">
-      <div className="bg-[#232428]  w-[52.5%] pl-5 h-[90vh] -mt-80  rounded-md   ">
+    <div className=" flex items-center justify-center h-[150vh] bg-[#191B1F] gap-5  w-[130%] mx-auto flex-wrap">
+      <div className="bg-[#232428]  ml-34 w-[110%] pl-5 h-[90vh] -mt-80  rounded-md   ">
         <Mininav />
         <div className="flex gap-4">
           <div>
@@ -105,7 +105,7 @@ export default async function Ps() {
                       <h3 className="bg-[#191B1F] w-20 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#3D55EF] font-[poppins] font-semibold">
                         {playstation.title}
                       </h3>
-                      <p className="text-white font-[Poppins] text-md  hover:text-[#0000FF] -mt-5 w-44">
+                      <p className="text-white font-[Poppins] text-md  hover:text-[#0000FF] -mt-5 w-30">
                         {playstation.description}
                       </p>
                     </div>
@@ -119,64 +119,7 @@ export default async function Ps() {
         </div>
       </div>
 
-      <div className="-mt-60   ">
-        <h1 className="pb-5 text-white  font-[poppins] text-[20px]">Label</h1>
-        <div className="flex flex-col gap-5">
-          <div
-            className=" bg-cover bg-center  bg-[#9932cc] bg-blend-overlay  w-85 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
-            style={{
-              backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757506725/mark-decile-WA84FtTi7NU-unsplash_1_vluzkr.jpg)`,
-            }}
-          >
-            <div className="flex gap-50 ">
-              <h1 className="text-white font-[poppins] font-bold text-lg ">
-                <Link href="/">Games</Link>
-              </h1>
-              <h1 className="text-white font-[poppins] font-bold bg-gray-400 w-7 text-center rounded-md">
-                4
-              </h1>
-            </div>
-          </div>
-
-          <div
-            className=" bg-cover bg-center  bg-[#3d55efb0] bg-blend-overlay  w-85 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
-            style={{
-              backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757506725/mark-decile-WA84FtTi7NU-unsplash_1_vluzkr.jpg)`,
-            }}
-          >
-            <div className="flex gap-52 ">
-              <h1 className="text-white font-[poppins] font-bold text-lg ">
-                <Link href="/">Video</Link>
-              </h1>
-              <h1 className="text-white font-[poppins] font-bold bg-gray-400 w-7 text-center rounded-md">
-                5
-              </h1>
-            </div>
-          </div>
-
-          <div
-            className=" bg-cover bg-center  bg-[#008B8B] bg-blend-overlay w-85 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
-            style={{
-              backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1756978011/javier-martinez-hUD0PUczwJQ-unsplash_tuxggf.jpg)`,
-            }}
-          >
-            <div className="flex gap-53  ">
-              <h1 className="text-white font-[poppins] font-bold text-lg ">
-                <Link href="/">Xbox</Link>
-              </h1>
-              <h1 className="text-white font-[poppins] font-bold bg-gray-400 w-7 text-center   rounded-md">
-                3
-              </h1>
-           
-            </div>
-         
-          </div>
-          <Com/>
-        </div>
-      
-      
-      
-      </div>
+    
     </div>
   );
 }

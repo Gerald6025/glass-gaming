@@ -33,7 +33,7 @@ const Com = async () => {
   const data = await getData();
   const comments: Comment[] = Array.isArray(data) ? data : data.posts || [];
 
-  return <div className="w-[100%]  mt-10 bg-[#232428] rounded-md">
+  return <div className="w-[75%]  mt-10 bg-[#232428] rounded-md">
     <h1 className="text-white  font-[poppins] text-[20px] pl-2 pt-2">Comments</h1>
     {comments.length > 0 ? (
       comments.map((comment: Comment) => (

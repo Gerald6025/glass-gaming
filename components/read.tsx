@@ -73,11 +73,11 @@ const Read = async () => {
     : data.playstations || [];
 
   return (
-    <div className="justify-center flex h-[250vh] bg-[#191B1F] gap-5 w-[100%] mx-auto flex-wrap">
+    <div className="justify-center flex h-[250vh] bg-[#191B1F] gap-5 w-[130%] mx-auto flex-wrap">
       {/* Left section with playstations */}
-      <div className="bg-[#232428] w-[52.5%] pl-5 h-[230vh] -mt-80 rounded-md">
+      <div className="bg-[#232428] w-full  h-[230vh] ml-34 -mt-80 rounded-md">
         <div className="flex justify-between items-center mt-5 mr-10">
-          <h1 className="font-[poppins] text-lg text-white">Read more</h1>
+          <h1 className="font-[poppins] text-lg text-white pl-5">Read more</h1>
           <h1 className="font-[poppins] text-sm text-gray-400 hover:text-[#0000FF]">
             <Link href="/">View all</Link>
           </h1>
@@ -142,61 +142,10 @@ const Read = async () => {
       </div>
 
       {/* Right section */}
-      <div className="-mt-45 flex-col flex gap-4">
-        <h1 className="font-[poppins] text-white text-lg">Join us</h1>
-        <div className="flex gap-4 flex-wrap">
-          <Link href={"/"}>
-            <div className="flex gap-2 items-center bg-[#0000FF] p-1 py-2 w-40 rounded-md">
-              <Image src="/faceboo.png" alt="face" width={30} height={20} />
-              <h1 className="text-white font-[poppins]">facebook</h1>
-            </div>
-          </Link>
+     
+         
 
-          <Link href={"/"}>
-            <div className="flex gap-2 items-center bg-[#008B8B] p-1 py-2 w-40 rounded-md">
-              <Image src="/twit.png" alt="twitter" width={33} height={20} />
-              <h1 className="text-white font-[poppins]">twitter</h1>
-            </div>
-          </Link>
-        </div>
-
-        <Link href={"/"}>
-          <div className="flex gap-2 items-center bg-[#9932cc] p-1 py-2 w-40 rounded-md">
-            <Image src="/twitch.webp" alt="twitter" width={30} height={20} />
-            <h1 className="text-white font-[poppins]">twitch</h1>
-          </div>
-        </Link>
-
-        <div className="bg-[#232428] h-130 w-[100%] mb-19 rounded-lg flex flex-col p-4">
-          <h1 className="mb-5 text-white font-[poppins]">Games</h1>
-          {posts.length > 0 ? (
-            posts.map((post) => (
-              <Link key={post.id} href={`/inside/${post.id}`} className="w-full mb-3">
-                <div className="rounded-md transition flex gap-2">
-                  <Image
-                    src={post.imageurl}
-                    alt={post.title}
-                    width={100}
-                    height={0}
-                    className="rounded-md mb-2 h-24 object-cover"
-                  />
-                  <div>
-                    <h3 className="bg-[#191B1F] w-15 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#9932cc] font-[poppins] font-semibold">
-                      {post.title}
-                    </h3>
-                    <p className="text-white font-[Poppins] text-sm hover:text-[#0000FF] -mt-5 w-40">
-                      {post.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            ))
-          ) : (
-            <p className="text-gray-400 text-sm">No posts available</p>
-          )}
-        </div>
-      </div>
-    </div>
+         </div>
   );
 };
 

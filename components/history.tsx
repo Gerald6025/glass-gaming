@@ -117,12 +117,12 @@ const History = async (): Promise<JSX.Element> => {
   const posts: Post[] = Array.isArray(data) ? data : data.posts || [];
 
   return (
-    <div className="w-full flex justify-center items-center gap-35 mt-15 flex-wrap">
+    <div className="w-full flex justify-center items-center gap-35 mt-15 flex-wrap p-10">
       {/* Static Hero Card */}
       <div>
         <Link href="/inside/10">
           <div
-            className="h-95 bg-[url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757489458/javier-martinez-hUD0PUczwJQ-unsplash_2_c5nwd2.jpg)] w-[122%] bg-cover bg-center rounded-lg px-8 pt-60 font-[poppins]"
+            className="h-95 bg-[url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757489458/javier-martinez-hUD0PUczwJQ-unsplash_2_c5nwd2.jpg)] w-[125%] bg-cover bg-center rounded-lg px-8 pt-60 ml-24 font-[poppins]"
           >
             <h2 className="bg-[#008B8B] w-11 text-center px-0 rounded-sm py-1 mb-5 text-[12px] font-[poppins] font-semibold text-white">
               Xbox
@@ -135,38 +135,8 @@ const History = async (): Promise<JSX.Element> => {
         </Link>
       </div>
 
-      {/* Dynamic Posts List */}
-      <div className="bg-[#232428] h-75 w-[25%] mb-19 rounded-lg flex flex-col justify-center items-center p-4">
-        <h1 className="pr-65 mb-5 text-white font-[poppins]">Xbox</h1>
-
-{posts.map((post: Post, index) => (
-  <div key={post.id ? `post-${post.id}` : `post-${index}`} className="w-full mb-3">
-    <Link href={`/inside/${post.id ?? index}`} className="block">
-      <div className="rounded-md transition flex gap-2">
-        <Image
-          src={post.imageurl}
-          alt={post.title}
-          width={120}
-          height={96}
-          className="rounded-md mb-2 h-24 object-cover"
-        />
-        <div>
-          <h3 className="bg-[#191B1F] w-11 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#3D55EF] font-[poppins] font-semibold">
-            {post.title}
-          </h3>
-          <p className="text-white font-[Poppins] text-sm hover:text-[#0000FF] -mt-5 w-40">
-            {post.description}
-          </p>
-        </div>
-      </div>
-    </Link>
-  </div>
-))}
-
-
-
-
-      </div>
+      
+     
     </div>
   );
 };
