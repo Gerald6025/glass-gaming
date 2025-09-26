@@ -117,12 +117,12 @@ const History = async (): Promise<JSX.Element> => {
   const posts: Post[] = Array.isArray(data) ? data : data.posts || [];
 
   return (
-    <div className="w-full flex justify-center items-center gap-35 mt-15 flex-wrap p-10">
+    <div className="w-full flex justify-center items-center gap-35 mt-15 md:p-10 p-0">
       {/* Static Hero Card */}
       <div>
         <Link href="/inside/10">
           <div
-            className="h-95 bg-[url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757489458/javier-martinez-hUD0PUczwJQ-unsplash_2_c5nwd2.jpg)] w-[125%] bg-cover bg-center rounded-lg px-8 pt-60 ml-24 font-[poppins]"
+            className="h-95 bg-[url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757489458/javier-martinez-hUD0PUczwJQ-unsplash_2_c5nwd2.jpg)] md:w-[125%] w-[90%]  bg-cover  bg-center rounded-lg px-8 pt-60 md:ml-24 ml-4  font-[poppins]"
           >
             <h2 className="bg-[#008B8B] w-11 text-center px-0 rounded-sm py-1 mb-5 text-[12px] font-[poppins] font-semibold text-white">
               Xbox

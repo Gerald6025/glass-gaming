@@ -18,7 +18,7 @@ export default function Home() {
      
       <Game />
       <Ban />
-      <div className="grid grid-cols-2 gap-10">
+      <div className="md:grid md:grid-cols-2 md:gap-10 flex-col flex">
         <div>
       <History />
       <Ps />
