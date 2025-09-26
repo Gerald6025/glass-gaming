@@ -75,8 +75,8 @@ const Side = async () => {
      const data = await getData();
       const posts: Post[] = Array.isArray(data) ? data : data.posts || [];
   return (
-    <div className='mt-25  ml-50'>
-       <div className="bg-[#232428] h-75 w-[75%] mb-19 rounded-lg flex flex-col justify-center items-center p-4">
+    <div className='mt-25  ml-45  sticky top-10 '>
+       <div className="bg-[#232428] h-75 w-[70%] mb-19 rounded-lg flex flex-col justify-center items-center p-4">
         <h1 className="pr-65 mb-5 text-white font-[poppins]">Xbox</h1>
 
 {posts.map((post: Post, index) => (
@@ -112,7 +112,7 @@ const Side = async () => {
         <h1 className="pb-5 text-white  font-[poppins] text-[20px]">Label</h1>
         <div className="flex flex-col gap-5">
           <div
-            className=" bg-cover bg-center  bg-[#9932cc] bg-blend-overlay  w-85 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
+            className=" bg-cover bg-center  bg-[#9932cc] bg-blend-overlay  w-83 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
             style={{
               backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757506725/mark-decile-WA84FtTi7NU-unsplash_1_vluzkr.jpg)`,
             }}
@@ -128,7 +128,7 @@ const Side = async () => {
           </div>
 
           <div
-            className=" bg-cover bg-center  bg-[#3d55efb0] bg-blend-overlay  w-85 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
+            className=" bg-cover bg-center  bg-[#3d55efb0] bg-blend-overlay  w-83 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
             style={{
               backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1757506725/mark-decile-WA84FtTi7NU-unsplash_1_vluzkr.jpg)`,
             }}
@@ -144,7 +144,7 @@ const Side = async () => {
           </div>
 
           <div
-            className=" bg-cover bg-center  bg-[#008B8B] bg-blend-overlay w-85 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
+            className=" bg-cover bg-center  bg-[#008B8B] bg-blend-overlay w-83 h-22 rounded-lg p-4 flex  justify-start items-center hover:scale-105 transition-transform duration-300 ease-in-out"
             style={{
               backgroundImage: `url(https://res.cloudinary.com/dvqhcm07a/image/upload/v1756978011/javier-martinez-hUD0PUczwJQ-unsplash_tuxggf.jpg)`,
             }}
@@ -167,7 +167,7 @@ const Side = async () => {
       
       </div>
 
-        <div className="mt-20 flex-col flex gap-4">
+        <div className="mt-20 flex-col flex gap-4 sticky top-10">
         <h1 className="font-[poppins] text-white text-lg">Join us</h1>
         <div className="flex gap-4 flex-wrap">
           <Link href={"/"}>
@@ -192,7 +192,7 @@ const Side = async () => {
           </div>
         </Link>
 
-        <div className="bg-[#232428] h-130 w-[75%] mb-19 rounded-lg flex flex-col p-4">
+        <div className="bg-[#232428] h-130 w-[70%] mb-19 rounded-lg flex flex-col p-4">
           <h1 className="mb-5 text-white font-[poppins]">Games</h1>
           {pots.length > 0 ? (
             pots.map((pot) => (

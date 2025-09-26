@@ -73,12 +73,12 @@ const Read = async () => {
     : data.playstations || [];
 
   return (
-    <div className="justify-center flex h-[250vh] bg-[#191B1F] gap-5 w-[130%] mx-auto flex-wrap">
+    <div className="justify-center flex h-[250vh] bg-[#191B1F] gap-5 w-[130%] mx-auto flex-wrap  -z-30">
       {/* Left section with playstations */}
-      <div className="bg-[#232428] w-full  h-[230vh] ml-34 -mt-80 rounded-md">
+      <div className="bg-[#232428] w-full  h-[230vh] ml-34 -mt-80 rounded-md z-10">
         <div className="flex justify-between items-center mt-5 mr-10">
           <h1 className="font-[poppins] text-lg text-white pl-5">Read more</h1>
-          <h1 className="font-[poppins] text-sm text-gray-400 hover:text-[#0000FF]">
+          <h1 className="font-[poppins] text-sm  text-gray-400 hover:text-[#0000FF]">
             <Link href="/">View all</Link>
           </h1>
         </div>
