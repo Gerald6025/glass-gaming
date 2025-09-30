@@ -33,14 +33,14 @@ export default async function Ps() {
     ? data
     : data.playstations || [];
   return (
-    <div className=" md:flex md:items-center md:justify-center h-[150vh] gap-5  w-[130%] mx-auto flex-wrap -z-30">
-      <div className="bg-[#232428]  ml-34 w-[110%] pl-5 h-[90vh] -mt-80  rounded-md z-40  ">
+    <div className=" md:flex md:items-center md:justify-center h-[230vh] md:h-[150vh] gap-5  w-full md:w-[130%] mx-auto flex-wrap -z-30">
+      <div className="bg-[#232428]  ml-0 md:ml-34 md:w-[110%] w-full pl-5 md:h-[90vh] h-[170vh] mt-10 md:-mt-80  rounded-md z-40  ">
         <Mininav />
-        <div className="flex gap-4">
+        <div className="md:flex gap-4">
           <div>
             <Link href={`/inside/1`}>
               <div
-                className="mt-5 bg-cover bg-center  w-95  h-85 rounded-lg p-4 flex flex-col justify-end hover:scale-105 transition-transform duration-300 ease-in-out"
+                className="mt-5 bg-cover bg-center  md:w-95 w-80  h-85 rounded-lg p-4 flex flex-col justify-end hover:scale-105 transition-transform duration-300 ease-in-out"
                 style={{
                   backgroundImage: "url('https://res.cloudinary.com/dvqhcm07a/image/upload/v1756975709/martin-katler-caNzzoxls8Q-unsplash_py26pk.jpg')",
                 }}

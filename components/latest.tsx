@@ -23,9 +23,9 @@ const cards = [
 
 const Latest: React.FC = () => {
   return (
-    <div className="bg-[#232428] h-200 w-[108%] -mt-100  rounded-lg flex flex-col p-4 text-white ml-35">
+    <div className="bg-[#232428] md:h-200 h-400 md:w-[108%] w-full md:-mt-100 -mt-50 rounded-lg flex flex-col p-4 text-white ml-0 md:ml-35">
       <h1 className="font-[poppins] text-xl">Latest</h1>
-      <div className="flex">
+      <div className="md:flex ">
         {cards.map((card) => (
           <div key={card.id} className="flex px-2">
             <Link href={`/inside/${card.id}`}>
