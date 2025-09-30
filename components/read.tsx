@@ -73,9 +73,9 @@ const Read = async () => {
     : data.playstations || [];
 
   return (
-    <div className="justify-center flex h-[250vh] bg-[#191B1F] gap-5 w-[130%] mx-auto flex-wrap  -z-30">
+    <div className="justify-center flex md:h-[250vh] h-[380vh] bg-[#191B1F] gap-5  w-full md:w-[130%] mx-auto flex-wrap  -z-30">
       {/* Left section with playstations */}
-      <div className="bg-[#232428] w-full  h-[230vh] ml-34 -mt-80 rounded-md z-10">
+      <div className="bg-[#232428] w-full h-[350vh] md:h-[230vh] md:ml-34 ml-0 -mt-80 rounded-md z-10 md:mx-0">
         <div className="flex justify-between items-center mt-5 mr-10">
           <h1 className="font-[poppins] text-lg text-white pl-5">Read more</h1>
           <h1 className="font-[poppins] text-sm  text-gray-400 hover:text-[#0000FF]">
@@ -87,19 +87,19 @@ const Read = async () => {
             playstations.map((playstation: Playstation) => (
               <div key={playstation.id} className="w-full mb-3">
                 <Link href={`/inside/${playstation.id}`} className="block">
-                  <div className="rounded-md transition flex gap-2">
+                  <div className="rounded-md transition md:flex   gap-2">
                     <Image
                       src={playstation.imageurl}
                       alt={playstation.title}
                       width={250}
                       height={0}
-                      className="rounded-md mb-2 object-cover h-70"
+                      className="rounded-md mb-2 object-cover h-70 "
                     />
                     <div className="flex flex-col gap-4">
                       <h3 className="bg-[#191B1F] w-20 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#3D55EF] font-[poppins] font-semibold">
                         {playstation.title}
                       </h3>
-                      <p className="text-white font-[Poppins] text-2xl hover:text-[#0000FF] -mt-5 w-100">
+                      <p className="text-white font-[Poppins] md:text-2xl text-md  hover:text-[#0000FF] -mt-5 w-100">
                         {playstation.description}
                       </p>
                       <p className="text-gray-400 text-sm">

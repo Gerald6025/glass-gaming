@@ -33,7 +33,7 @@ export default async function Ps() {
     ? data
     : data.playstations || [];
   return (
-    <div className=" flex items-center justify-center h-[150vh] gap-5  w-[130%] mx-auto flex-wrap -z-30">
+    <div className=" md:flex md:items-center md:justify-center h-[150vh] gap-5  w-[130%] mx-auto flex-wrap -z-30">
       <div className="bg-[#232428]  ml-34 w-[110%] pl-5 h-[90vh] -mt-80  rounded-md z-40  ">
         <Mininav />
         <div className="flex gap-4">
