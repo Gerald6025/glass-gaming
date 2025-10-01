@@ -60,39 +60,39 @@ export default function RootLayout({
                     alt="glasslogo"
                     width={100}
                     height={20}
-                  />{" "}
+                   className=""  />{" "}
                 </Link>
               </li>
               <li>
-                <Link href="/xbox" className="hover:text-[#0000FF]">
+                <Link href="/xbox" className="hover:text-[#0000FF] hidden md:block">
                   Xbox
                 </Link>
               </li>
               <li>
-                <Link href="/news" className="hover:text-[#0000FF]">
+                <Link href="/news" className="hover:text-[#0000FF] hidden md:block">
                   News
                 </Link>
               </li>
               <li>
-                <Link href="/games" className="hover:text-[#0000FF]">
+                <Link href="/games" className="hover:text-[#0000FF] hidden md:block">
                   Games
                 </Link>
               </li>
               <li>
-                <Link href="/random" className="hover:text-[#0000FF]">
+                <Link href="/random" className="hover:text-[#0000FF] hidden md:block">
                   Random
                 </Link>
               </li>
 
               <li>
-                <Link href="/play" className="hover:text-[#0000FF]">
+                <Link href="/play" className="hover:text-[#0000FF] hidden md:block">
                   Play Station
                 </Link>
               </li>
 
 
                <li>
-                <Link href="/signUp" className="hover:text-[#0000FF]">
+                <Link href="/signUp" className="hover:text-[#0000FF] hidden md:block">
                    Create Post
                 </Link>
               </li>
