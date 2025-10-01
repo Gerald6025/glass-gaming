@@ -6,7 +6,7 @@ import {  FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa'
 const Footer = () => {
   return (
     <>
-    <div className="bg-[#232428] text-white p-5 mt-10 flex gap-10 w-[80%] mx-auto justify-between rounded-2xl">
+    <div className="bg-[#232428] text-white p-5 mt-10 md:flex gap-10 md:w-[80%] w-[90%] mx-auto justify-between rounded-2xl">
       <div className="flex flex-col gap-2">
         <Link href="/">
           <Image
@@ -121,9 +121,9 @@ const Footer = () => {
 
       </div>
     </div>
-    <div className="flex justify-between ml-35 mr-35 mt-6 ">
+    <div className="flex justify-between md:ml-35 ml-10  mr-35 mt-6 ">
         <div>
-            <h1 className="text-white">All Rights Reserved by Glass © 2025</h1>
+            <h1 className="text-white ">All Rights Reserved by Glass © 2025</h1>
         </div>
 
         <div className="flex gap-5 text-white ">

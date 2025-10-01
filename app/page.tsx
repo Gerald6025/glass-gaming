@@ -14,7 +14,7 @@ import Side from "@/components/side";
 
 export default function Home() {
   return (
-    <div className="bg-[#191B1F] h-[950vh] relative  ">
+    <div className="bg-[#191B1F] md:h-[950vh]  h-[1300vh]relative  ">
      
       <Game />
       <Ban />

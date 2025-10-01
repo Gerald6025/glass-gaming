@@ -75,8 +75,8 @@ const Side = async () => {
      const data = await getData();
       const posts: Post[] = Array.isArray(data) ? data : data.posts || [];
   return (
-    <div className='mt-25  ml-45  sticky top-10 '>
-       <div className="bg-[#232428] h-75 w-[70%] mb-19 rounded-lg flex flex-col justify-center items-center p-4">
+    <div className='md:mt-25 mt-2 md:ml-45  ml-0 sticky top-10 '>
+       <div className="bg-[#232428] h-75 md:w-[70%] w-full mb-19 rounded-lg flex flex-col justify-center items-center p-4">
         <h1 className="pr-65 mb-5 text-white font-[poppins]">Xbox</h1>
 
 {posts.map((post: Post, index) => (
@@ -108,7 +108,7 @@ const Side = async () => {
 
       </div>
 
-       <div className="mt-20   ">
+       <div className="mt-20   md:ml-0 ml-5">
         <h1 className="pb-5 text-white  font-[poppins] text-[20px]">Label</h1>
         <div className="flex flex-col gap-5">
           <div
@@ -167,7 +167,7 @@ const Side = async () => {
       
       </div>
 
-        <div className="mt-20 flex-col flex gap-4 sticky top-10">
+        <div className="mt-20 flex-col flex gap-4 sticky top-10 md:ml-0 ml-4">
         <h1 className="font-[poppins] text-white text-lg">Join us</h1>
         <div className="flex gap-4 flex-wrap">
           <Link href={"/"}>
@@ -192,7 +192,7 @@ const Side = async () => {
           </div>
         </Link>
 
-        <div className="bg-[#232428] h-130 w-[70%] mb-19 rounded-lg flex flex-col p-4">
+        <div className="bg-[#232428] h-130 md:w-[70%] w-[95%] mb-19 md:ml-0 ml-1 rounded-lg flex flex-col p-4">
           <h1 className="mb-5 text-white font-[poppins]">Games</h1>
           {pots.length > 0 ? (
             pots.map((pot) => (

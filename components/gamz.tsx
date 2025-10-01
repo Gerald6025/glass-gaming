@@ -46,7 +46,7 @@ const posts = [
 
 const Gamz = () => {
   return (
-      <div className="bg-[#232428] h-270 w-[108%] mb-19 rounded-lg    p-10 ml-34 mt-10">
+      <div className="bg-[#232428] md:h-270 md:w-[108%] w-full mb-19 rounded-lg    p-10 md:ml-34 ml-0 mt-10">
          <h1 className="mb-5 text-white text-lg font-[poppins] ">Games</h1>
          <div className='grid grid-cols-2 gap-4  '>
         {posts.length > 0 ? (
@@ -59,12 +59,12 @@ const Gamz = () => {
                   alt={post.title}
                   width={500}
                   height={0}
-                  className="rounded-md mb-2  h-90  object-cover "
+                  className="rounded-md mb-2  md:h-90  h-40 object-cover "
                 />
                 <div className='flex flex-col gap-1'>
                 <h3 className="bg-[#191B1F] w-15 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#9932cc] font-[poppins] font-semibold">{post.title}</h3>
                 <p className="text-white font-[Poppins] text-sm  hover:text-[#0000FF]  -mt-5 w-full">{post.description}</p>
-                <div className='flex text-gray-400 text-[12px]'>
+                <div className='flex  text-gray-400 md:text-[12px] text-[10px] '>
                      <p>IWI STUDIO</p>
                                       <Image
                                         src="https://res.cloudinary.com/dvqhcm07a/image/upload/v1756988867/dot_wgacsq.png"
