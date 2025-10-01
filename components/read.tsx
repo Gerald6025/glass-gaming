@@ -99,7 +99,7 @@ const Read = async () => {
                       <h3 className="bg-[#191B1F] w-20 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#3D55EF] font-[poppins] font-semibold">
                         {playstation.title}
                       </h3>
-                      <p className="text-white font-[Poppins] md:text-2xl text-md  hover:text-[#0000FF] -mt-5 w-100">
+                      <p className="text-white font-[Poppins] md:text-2xl text-md w-80  hover:text-[#0000FF] -mt-5 md:w-100">
                         {playstation.description}
                       </p>
                       <p className="text-gray-400 text-sm">

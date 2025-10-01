@@ -98,7 +98,7 @@ const Game = () => {
   );
 
   return (
-    <div className="overflow-hidden p-10 text-white  w-[79%]  mx-auto" ref={emblaRef} >
+    <div className="overflow-hidden  p-10 text-white  w-[79%]  mx-auto" ref={emblaRef} >
       <div className="flex  ">
         {cards.map((card) => (
           <div
