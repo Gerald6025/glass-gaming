@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import Image from "next/image";
 import { Poppins } from "next/font/google";
+import Navbar from "@/components/nav";
 
 
 
@@ -39,77 +38,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppinsFont.className} antialiased`}
       >
-        
-        <div className="justify-between  items-center flex px-5 gap-20 absolute  text-white top-8 bg-[#232428] w-[80%] right-[10%] left-[10%] z-10 py-1 rounded-md">
-          <div className="gap-10 flex font-[poppins]  font-medium   text-[14px]">
-            <ul className="flex gap-6  items-center">
-              <li>
-                <Link href=" " className="hover:text-[#0000FF]">
-                  <Image
-                  src="/four-circle.png"
-                  alt="fourcircle"
-                  width={30}
-                  height={20}
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link href="/">
-                  <Image
-                    src="https://res.cloudinary.com/dvqhcm07a/image/upload/v1756887695/glassss_3_ga6ncw.png"
-                    alt="glasslogo"
-                    width={100}
-                    height={20}
-                   className=""  />{" "}
-                </Link>
-              </li>
-              <li>
-                <Link href="/xbox" className="hover:text-[#0000FF] hidden md:block">
-                  Xbox
-                </Link>
-              </li>
-              <li>
-                <Link href="/news" className="hover:text-[#0000FF] hidden md:block">
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link href="/games" className="hover:text-[#0000FF] hidden md:block">
-                  Games
-                </Link>
-              </li>
-              <li>
-                <Link href="/random" className="hover:text-[#0000FF] hidden md:block">
-                  Random
-                </Link>
-              </li>
+        <Navbar/>
 
-              <li>
-                <Link href="/play" className="hover:text-[#0000FF] hidden md:block">
-                  Play Station
-                </Link>
-              </li>
-
-
-               <li>
-                <Link href="/signUp" className="hover:text-[#0000FF] hidden md:block">
-                   Create Post
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex items-center">
-            <Link href="">
-              <Image
-                src="https://res.cloudinary.com/dvqhcm07a/image/upload/v1756890225/searchy_rsctz5.png"
-                alt="glasslogo"
-                width={20}
-                height={20}
-              />{" "}
-            </Link>
-          </div>
-        </div>
         {children}
     
       </body>

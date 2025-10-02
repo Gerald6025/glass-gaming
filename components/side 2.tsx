@@ -70,12 +70,12 @@ export const getData = async (): Promise<Post[] | { posts: Post[] }> => {
 
 
 
-const Side = async () => {
+const Slide  = async () => {
 
      const data = await getData();
       const posts: Post[] = Array.isArray(data) ? data : data.posts || [];
   return (
-    <div className='md:mt-25 mt-2 md:ml-45  ml-0 sticky top-10 '>
+    <div className='md:mt-60 mt-2 md:ml-45  ml-0  '>
        <div className="bg-[#232428] h-75 md:w-[70%] w-full mb-19 rounded-lg flex flex-col justify-center items-center p-4">
         <h1 className="pr-65 mb-5 text-white font-[poppins]">Xbox</h1>
 
@@ -91,10 +91,10 @@ const Side = async () => {
           className="rounded-md mb-2 h-24 object-cover"
         />
         <div>
-          <h3 className="bg-[#191B1F] w-11 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#3D55EF] font-[poppins] font-semibold">
+          <h3 className="bg-[#191B1F] w-11 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#008B8B] font-[poppins] font-semibold">
             {post.title}
           </h3>
-          <p className="text-white font-[Poppins] text-sm hover:text-[#0000FF] -mt-5 w-40">
+          <p className="text-white font-[Poppins] text-sm hover:text-[#008B8B] -mt-5 w-40">
             {post.description}
           </p>
         </div>
@@ -160,7 +160,7 @@ const Side = async () => {
             </div>
          
           </div>
-          <Com />
+          <Com/>
         </div>
       
       
@@ -209,7 +209,7 @@ const Side = async () => {
                     <h3 className="bg-[#191B1F] w-15 text-center px-0 rounded-sm py-1 mb-5 text-[12px] text-[#9932cc] font-[poppins] font-semibold">
                       {pot.title}
                     </h3>
-                    <p className="text-white font-[Poppins] text-sm hover:text-[#0000FF] -mt-5 w-40">
+                    <p className="text-white font-[Poppins] text-sm hover:text-[#008B8B] -mt-5 w-40">
                       {pot.description}
                     </p>
                   </div>
@@ -225,6 +225,6 @@ const Side = async () => {
   )
 }
 
-export default Side
+export default Slide 
 
 

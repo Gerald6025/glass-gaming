@@ -1,12 +1,29 @@
+import Ban from "@/components/ban";
+import Footer from "@/components/footer";
+import Xb from "@/components/xb";
+import Slide from "@/components/side 2";
+import Image from "next/image";
 
 
 
 
 export default function Xbox() {
   return (
-    <div className="bg-[#191B1F] h-[100vh] relative -z-40 flex items-center justify-center">
-      <h1 className="text-white text-8xl ">Xbox</h1>
+    <div className="bg-[#191B1F] md:h-[430vh] h-[800vh] relative z-0 ">
+      <div>
+     <Image src='https://res.cloudinary.com/dvqhcm07a/image/upload/v1757405232/adbanner-9_oix4oq.png' alt='banner' width={700} height={500}
+     className='rounded-xl relative top-50 mx-auto w-70 md:w-160'
+     /> 
+    </div>
+      <div className="grid md:grid-cols-2">
+        <div><Xb /></div>
+        <div><Slide /></div>
       
+
+
+      </div>
+
+  <Footer/>
     </div>
   );
 }
