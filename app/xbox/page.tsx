@@ -1,4 +1,4 @@
-import Ban from "@/components/ban";
+
 import Footer from "@/components/footer";
 import Xb from "@/components/xb";
 import Slide from "@/components/side 2";

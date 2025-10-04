@@ -11,7 +11,7 @@ export default function Navbar() {
   let hoverColor = "hover:text-[#0000FF]"; 
   if (pathname === "/") hoverColor = "hover:text-[#0000FF]";
   else if (pathname.startsWith("/xbox")) hoverColor = "hover:text-[#008B8B]";
-  else if (pathname.startsWith("/news")) hoverColor = "hover:text-[#0000FF]";
+  else if (pathname.startsWith("/news")) hoverColor = "hover:text-[#3D55EF]";
   else if (pathname.startsWith("/games")) hoverColor = "hover:text-[#9932CC]";
   else if (pathname.startsWith("/random")) hoverColor = "hover:text-[#0000FF]";
   else if (pathname.startsWith("/play")) hoverColor = "hover:text-[#0000FF]";
