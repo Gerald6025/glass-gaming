@@ -39,7 +39,8 @@ export default function Navbar() {
                 alt="glasslogo"
                 width={100}
                 height={20}
-              />
+               className="md:w-25 w-1000 object-cover"
+               />
             </Link>
           </li>
           <li>
