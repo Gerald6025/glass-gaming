@@ -18,7 +18,7 @@ export default function Navbar() {
   else if (pathname.startsWith("/signUp")) hoverColor = "hover:text-[#0000FF]";
 
   return (
-    <div className="justify-between items-center flex px-5 gap-20 absolute text-white top-8 bg-[#232428] w-[80%] right-[10%] left-[10%] z-10 py-1 rounded-md">
+    <div className="justify-between items-center flex px-5 gap-20 absolute text-white top-8 bg-[#232428] w-[80%] right-[10%] left-[10%] z-10 md:py-1 py-5 rounded-md">
       <div className="gap-10 flex font-[poppins] font-medium text-[14px]">
         <ul className="flex gap-6 items-center">
           <li>
@@ -28,6 +28,7 @@ export default function Navbar() {
                 alt="fourcircle"
                 width={30}
                 height={20}
+                className="w-180 object-cover md:w-8"
               />
             </Link>
           </li>
