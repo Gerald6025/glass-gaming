@@ -28,7 +28,7 @@ export default function Navbar() {
                 alt="fourcircle"
                 width={30}
                 height={20}
-                className="w-180 object-cover md:w-8"
+                className="w-180 object-cover md:w-8  md:border-0 border-2 border-amber-400"
               />
             </Link>
           </li>
@@ -39,7 +39,7 @@ export default function Navbar() {
                 alt="glasslogo"
                 width={100}
                 height={20}
-               className="md:w-25 w-1000 object-cover"
+               className="md:w-25 w-1000 object-cover md:border-0 border-2 border-amber-400"
                />
             </Link>
           </li>

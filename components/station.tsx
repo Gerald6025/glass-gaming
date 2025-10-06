@@ -70,7 +70,7 @@ const Station = async () => {
   return (
     <>
     
-    <div className="justify-center   md:h-[301vh] h-[380vh] relative top-55 -z-40 bg-[#191B1F]  gap-5  w-full md:w-[100%] mx-auto flex-wrap  ">
+    <div className="justify-center   md:h-[301vh] h-[320vh] relative top-55 z-20 bg-[#191B1F]  gap-5  w-full md:w-[100%] mx-auto flex-wrap  ">
       
       
       <div className="bg-[#232428] w-full md:w-[100%] h-[332vh] md:h-[220vh] md:ml-30 ml-0 md:sticky top-10   rounded-md z-10 md:mx-0">
