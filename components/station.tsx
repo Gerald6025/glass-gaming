@@ -73,7 +73,7 @@ const Station = async () => {
     <div className="justify-center   md:h-[301vh] h-[320vh] relative top-55 z-20 bg-[#191B1F]  gap-5  w-full md:w-[100%] mx-auto flex-wrap  ">
       
       
-      <div className="bg-[#232428] w-full md:w-[100%] h-[332vh] md:h-[220vh] md:ml-30 ml-0 md:sticky top-10   rounded-md z-10 md:mx-0">
+      <div className="bg-[#232428] w-full md:w-[100%] h-[342vh] md:h-[220vh] md:ml-30 ml-0 md:sticky top-10   rounded-md z-10 md:mx-0">
         <div className="flex justify-between items-center mt-5 mr-10">
           <h1 className="font-[poppins] text-lg text-white pl-5 pt-5">PlayStation</h1>
           <h1 className="font-[poppins] text-sm  text-gray-400 hover:text-[#0000FF]">

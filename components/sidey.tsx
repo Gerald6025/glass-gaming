@@ -75,7 +75,7 @@ const Sidey = async () => {
      const data = await getData();
       const posts: Post[] = Array.isArray(data) ? data : data.posts || [];
   return (
-    <div className='md:mt-60 mt-2 md:ml-45  ml-0  '>
+    <div className='md:mt-60 mt-80 md:ml-45  ml-0  '>
        <div className="bg-[#232428] h-75 md:w-[70%] w-full mb-19 rounded-lg flex flex-col justify-center items-center p-4">
         <h1 className="pr-65 mb-5 text-white font-[poppins]">Xbox</h1>
 
