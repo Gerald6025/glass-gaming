@@ -25,7 +25,7 @@ export default function Navbar(): JSX.Element {
         {/* Left side navigation */}
         <div className="flex gap-10 font-[poppins] font-medium text-[14px]">
           <ul className="flex md:gap-6 gap-2 items-center">
-            {/* Circle logo - toggles sidebar */}
+          
             <li>
               <button
                 onClick={() => setIsSidebarOpen(true)}
