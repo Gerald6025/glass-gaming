@@ -37,8 +37,11 @@ export default function Home() {
       <div className=" md:flex border-2 border-gray-600 rounded-lg p-4 m-4">
       <CreatePostPage />
       <PostList />
+     
     </div>
+    
     </div>
+    
     </div>
   );
 }

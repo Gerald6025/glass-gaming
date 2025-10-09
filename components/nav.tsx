@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   const router = useRouter();
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
-  // Dynamic hover color based on route
+  
   let hoverColor = "hover:text-[#0000FF]";
   if (pathname.startsWith("/xbox")) hoverColor = "hover:text-[#008B8B]";
   else if (pathname.startsWith("/news")) hoverColor = "hover:text-[#3D55EF]";
@@ -31,12 +31,12 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      {/* Navbar */}
+      
       <div className="flex justify-between items-center px-5 gap-20 absolute top-8 bg-[#232428] text-white w-[80%] right-[10%] left-[10%] z-20 md:py-1 py-2 rounded-md">
-        {/* Left side navigation */}
+        
         <div className="flex gap-10 font-[poppins] font-medium text-[14px]">
           <ul className="flex md:gap-6 gap-2 items-center">
-            {/* Circle logo - toggles sidebar */}
+            
             <li>
               <button
                 onClick={() => setIsSidebarOpen(true)}
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
               </button>
             </li>
 
-            {/* Glass logo */}
+            
             <li>
               <Link href="/">
                 <Image
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
 
-            {/* Desktop Navigation Links */}
+            
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className={`${hoverColor} hidden md:block`}>
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
           </ul>
         </div>
 
-        {/* Right side search icon */}
+        
         <div className="flex items-center">
           <Link href="/">
             <Image
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Sidebar overlay */}
+  
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-10"
@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
         />
       )}
 
-      {/* Sidebar panel */}
+      
       <div
         role="dialog"
         aria-modal="true"
@@ -122,7 +122,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
-        {/* Sidebar Links */}
+        
         <ul className="flex flex-col gap-4 font-[poppins]">
           {navItems.map((item) => (
             <li key={item.href}>

@@ -119,7 +119,7 @@ const Side = async () => {
           >
             <div className="flex gap-50 ">
               <h1 className="text-white font-[poppins] font-bold text-lg ">
-                <Link href="/">Games</Link>
+                <Link href="/games">Games</Link>
               </h1>
               <h1 className="text-white font-[poppins] font-bold bg-gray-400 w-7 text-center rounded-md">
                 4
@@ -135,7 +135,7 @@ const Side = async () => {
           >
             <div className="flex gap-52 ">
               <h1 className="text-white font-[poppins] font-bold text-lg ">
-                <Link href="/">Video</Link>
+                <Link href="/news">Video</Link>
               </h1>
               <h1 className="text-white font-[poppins] font-bold bg-gray-400 w-7 text-center rounded-md">
                 5
@@ -151,7 +151,7 @@ const Side = async () => {
           >
             <div className="flex gap-53  ">
               <h1 className="text-white font-[poppins] font-bold text-lg ">
-                <Link href="/">Xbox</Link>
+                <Link href="/xbox">Xbox</Link>
               </h1>
               <h1 className="text-white font-[poppins] font-bold bg-gray-400 w-7 text-center   rounded-md">
                 3

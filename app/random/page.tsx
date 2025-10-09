@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 import Rand from "@/components/rand";
 import Sid from "@/components/sid";
 import Image from "next/image";
-
+import Sub from "@/components/sub";
 
 
 
@@ -24,6 +24,7 @@ export default function Xbox() {
       </div>
 
   <Footer/>
+  <Sub/>
     </div>
   );
 }
