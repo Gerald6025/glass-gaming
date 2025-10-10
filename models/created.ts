@@ -21,6 +21,6 @@ const createdSchema = new Schema({
         required: true
     }
 
- },{timestamps:true})
+  },{timestamps:true})
 
  export default mongoose.models.created || mongoose.model('created', createdSchema)

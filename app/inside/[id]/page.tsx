@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Insider from "@/components/insider";
-import { FaGreaterThan } from "react-icons/fa";
+import { FaGreaterThan, FaThumbsUp, FaPaperPlane } from "react-icons/fa";
 import Footer from "@/components/footer";
 
 const cards = [
@@ -94,9 +94,94 @@ const cards = [
 
 const toSlug = (text: string) => text.toLowerCase().replace(/\s+/g, "-");
 
+interface Comment {
+  _id: string;
+  postId: string;
+  author: string;
+  text: string;
+  createdAt: string;
+}
+
+
 const Page = () => {
   const { id } = useParams();
   const post = cards.find((card) => card.id === parseInt(id as string));
+
+  const [comments, setComments] = useState<Comment[]>([]);
+  const [commentText, setCommentText] = useState('');
+  const [likes, setLikes] = useState(0);
+
+  useEffect(() => {
+    fetchComments();
+    fetchLikes();
+  }, [id]);
+
+  const fetchComments = async () => {
+    try {
+      const res = await fetch('/api/comment2');
+      if (res.ok) {
+        const data = await res.json();
+        const postComments = data.filter((c: Comment) => c.postId === id);
+        setComments(postComments);
+      } else {
+        console.error('Failed to fetch comments');
+        setComments([]);
+      }
+    } catch (error) {
+      console.error('Error fetching comments:', error);
+      setComments([]);
+    }
+  };
+
+  const fetchLikes = async () => {
+    try {
+      const res = await fetch(`/api/like?postId=${id}`);
+      const data = await res.json();
+      setLikes(data.likes || 0);
+    } catch (error) {
+      console.error('Error fetching likes:', error);
+    }
+  };
+
+  const handleCommentSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!commentText.trim()) return;
+    try {
+      const res = await fetch('/api/comment2', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ postId: id, author: 'Anonymous', text: commentText })
+      });
+      if (res.ok) {
+        setCommentText('');
+        fetchComments();
+      } else {
+        const errorText = await res.text();
+        console.error('Failed to post comment:', errorText);
+      }
+    } catch (error) {
+      console.error('Error posting comment:', error);
+    }
+  };
+
+  const handleLike = async () => {
+    try {
+      const res = await fetch('/api/like', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ postId: id })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setLikes(data.likes);
+      } else {
+        const errorText = await res.text();
+        console.error('Error liking post:', errorText);
+      }
+    } catch (error) {
+      console.error('Error liking post:', error);
+    }
+  };
 
   if (!post) {
     return (
@@ -107,29 +192,6 @@ const Page = () => {
   }
 
   const linkPath = `/${toSlug(post.title)}`;
-
-  // Sample comments data (you can replace this with real data from state/API)
-  const comments = [
-    {
-      id: 1,
-      author: "User1",
-      text: "Great post! Thanks for the info.",
-      date: "2 days ago",
-    },
-    {
-      id: 2,
-      author: "User2",
-      text: "This helped me a lot.",
-      date: "1 day ago",
-    },
-  ];
-
-  // Simple comment input handler (placeholder - integrate with form/state as needed)
-  const handleCommentSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Add logic to submit comment here
-    console.log("Comment submitted");
-  };
 
   return (
     <div className="bg-[#191B1F] min-h-screen relative z-0  ">
@@ -143,6 +205,13 @@ const Page = () => {
               <p className="text-[30px] font-[poppins] font-semibold text-white">
                 {post.description}
               </p>
+
+              <div className="flex items-center gap-4 mt-4">
+                <button onClick={handleLike} className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                  <FaThumbsUp />
+                  {likes}
+                </button>
+              </div>
 
               <div className="flex text-[12px] mt-2 mb-5 font-[poppins] items-center gap-2">
                 <h2 className={post.sty1}>
@@ -276,13 +345,13 @@ const Page = () => {
                 src="/author.png"
                 alt="auth"
                 width={100}
-                height={20}
+                height={100}
                 className="rounded-lg"
               />
             </div>
             <div className="flex flex-col gap-2">
               <h1 className="text-white text-md">IWI STUDIO</h1>
-              <h1 className="text-sm text-gray-500 w-[70%]">
+              <h1 className="text-sm text-gray-500 w-[90%]">
                 Lorem ipsum, or lipsum as it is sometimes known, is dummy text
                 used in laying out print, graphic or web designs.
               </h1>
@@ -299,26 +368,29 @@ const Page = () => {
               <div className="flex gap-2">
                 <input
                   type="text"
+                  value={commentText}
+                  onChange={(e) => setCommentText(e.target.value)}
                   placeholder="Write a comment..."
                   className="flex-1 p-2 bg-transparent border border-gray-500 text-white rounded-md outline-none"
                 />
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+                  className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+                  title="Post comment"
                 >
-                  Post
+                  <FaPaperPlane />
                 </button>
               </div>
             </form>
 
             <div className="space-y-4">
-              {comments.map((comment) => (
-                <div key={comment.id} className="p-4 bg-[#191B1F] rounded-md">
+              {comments.map((comment: Comment) => (
+                <div key={comment._id} className="p-4 bg-[#191B1F] rounded-md">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-white font-semibold">
                       {comment.author}
                     </h3>
-                    <p className="text-gray-500 text-sm">{comment.date}</p>
+                    <p className="text-gray-500 text-sm">{new Date(comment.createdAt).toLocaleDateString()}</p>
                   </div>
                   <p className="text-white">{comment.text}</p>
                 </div>

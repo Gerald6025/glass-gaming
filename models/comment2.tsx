@@ -3,24 +3,23 @@ import mongoose from 'mongoose'
 
 const { Schema } = mongoose
 
-const playstationSchema = new Schema({
+const comment2Schema = new Schema({
 
-    title: {
+    postId: {
         type: String,
         required: true
     },
 
-    description: {
+    author: {
         type: String,
-        required: true,
-
+        required: true
     },
 
-    imageurl:{
+    text: {
         type: String,
         required: true
     }
 
   },{timestamps:true})
 
- export default mongoose.models.playstation || mongoose.model('playstation', playstationSchema)
+ export default mongoose.models.Comment2 || mongoose.model('Comment2', comment2Schema)
