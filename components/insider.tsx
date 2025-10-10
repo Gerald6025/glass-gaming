@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaLinkedinIn, FaPinterest, FaTelegram, FaPlus } 
 import Link from 'next/link'
 const Insider = () => {
   return (
-    <div className=' h-380 '>
+    <div className=' md:h-390 h-650 '>
       
       <div className='flex flex-col text-white gap-8 z-40 bg-[#00000048] p-4 rounded-lg sticky top-5 w-10 justify-center items-center '>
       <Link href={"/"}><FaFacebook className='hover:text-[#1877F2]' /></Link>
