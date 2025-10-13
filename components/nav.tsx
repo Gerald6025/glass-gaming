@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       
-      <div className="flex justify-between items-center px-5 gap-20 absolute top-8 bg-[#232428] text-white w-[80%] right-[10%] left-[10%] z-20 md:py-1 py-2 rounded-md">
+      <div className="flex justify-between items-center px-5 gap-20 absolute top-8 bg-[#232428] text-white w-[90%] left-[5%] right-[5%] md:w-[80%] md:right-[10%] md:left-[10%] z-20 md:py-1 py-2 rounded-md">
         
         <div className="flex gap-10 font-[poppins] font-medium text-[14px]">
           <ul className="flex md:gap-6 gap-2 items-center">

@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Insider from "@/components/insider";
-import { FaGreaterThan, FaThumbsUp, FaPaperPlane } from "react-icons/fa";
+import { FaGreaterThan, FaThumbsUp, FaPaperPlane, FaComment } from "react-icons/fa";
 import Footer from "@/components/footer";
 
 const cards = [
@@ -115,6 +115,13 @@ const Page = () => {
     fetchComments();
     fetchLikes();
   }, [id]);
+
+  useEffect(() => {
+    const logScreenWidth = () => console.log('Screen width:', window.innerWidth);
+    logScreenWidth();
+    window.addEventListener('resize', logScreenWidth);
+    return () => window.removeEventListener('resize', logScreenWidth);
+  }, []);
 
   const fetchComments = async () => {
     try {
@@ -358,7 +365,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="md:ml-34 ml-0 mt-10 p-6 bg-[#232428] rounded-md mx-auto md:mx-0 md:w-[55%] w-full">
+          <div className="sm:ml-4 md:ml-34 lg:ml-40 ml-0 mt-10 sm:p-4 p-6 lg:p-8 bg-[#232428] rounded-md mx-auto md:mx-0 sm:w-[90%] md:w-[55%] lg:w-[50%] w-full">
             <h2 className="text-white text-xl font-bold mb-4">Comments</h2>
 
             <form
@@ -378,7 +385,7 @@ const Page = () => {
                   className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
                   title="Post comment"
                 >
-                  <FaPaperPlane />
+                  <FaComment />
                 </button>
               </div>
             </form>
